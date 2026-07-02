@@ -114,11 +114,11 @@ practice.
 | Folder | Contents |
 |---|---|
 | `ref/` | Source survey of the 14 candidate models — VRAM estimates and official repo links |
-| `reports/` | `evaluation_plan.md` (methodology) and `model_comparison_results.md` (actual results + caveats) |
-| `src/cv/` | Track A runner scripts — one per CV/FER model (`run_deepface.py`, `run_fer.py`, `run_hsemotion.py`, `run_efficientface.py`) — plus `live_webcam_demo.py`, a live-camera smoke test that cycles all four |
+| `reports/` | `evaluation_plan.md` (methodology), `model_comparison_results.md` (actual results + caveats), `license_comparison.md` (license per shortlisted model), `track_a_stress_test_results.md` (occlusion/lighting robustness check) |
+| `src/cv/` | Track A runner scripts — one per CV/FER model (`run_deepface.py`, `run_fer.py`, `run_hsemotion.py`, `run_efficientface.py`) — plus `live_webcam_demo.py` (live-camera smoke test cycling all four) and `collect_track_a_stress_set.py` (occlusion/lighting stress-set capture + eval) |
 | `src/vlm/` | Track B runner scripts — one per VLM (`run_moondream2.py`, `run_qwen25vl.py`) |
 | `src/eval/` | Shared harness: latency timer, VRAM tracker, classification metrics, rubric scoring, run logging, and the `aggregate_track_a.py` / `aggregate_track_b.py` comparison-table generators |
-| `data/` | FER2013 manifests + a 20-image Track B scene-context set with authored ground truth (`data/track_b/README.md` explains provenance/limitations); large downloaded images and model checkpoints are gitignored and regenerate via the runner scripts |
+| `data/` | FER2013 manifests + a 20-image Track B scene-context set with authored ground truth (`data/track_b/README.md` explains provenance/limitations); large downloaded images and model checkpoints are gitignored and regenerate via the runner scripts; `track_a_stress/` (self-collected webcam photos) is gitignored — personal face images, not published |
 | `results/` | `eval/` — aggregated comparison tables, confusion matrices, and rubric scores; `logs/` — raw per-image/per-call outputs for every run |
 
 ## Status
@@ -132,10 +132,11 @@ practice.
 - [x] Run Track B (VLM) benchmarks — 2 of 6 candidates (Moondream2, Qwen2.5-VL-3B 4-bit)
 - [x] Publish results + decision-matrix writeup (`reports/model_comparison_results.md`)
 - [x] Live webcam smoke test for all four Track A models (`src/cv/live_webcam_demo.py`)
-- [ ] Track A self-collected occlusion/lighting stress set (needs a physical camera)
-- [ ] Track B staged photos + human-authored ground truth (current set is an AI-authored stand-in, see `data/track_b/README.md`)
-- [ ] Py-Feat (blocked — see results doc), Florence-2, PaliGemma-mix, MiniCPM-V 2.6, LLaVA-1.5-7B
-- [ ] License comparison across the shortlisted models
+- [x] Track A self-collected occlusion/lighting stress set (`src/cv/collect_track_a_stress_set.py`, results in [`reports/track_a_stress_test_results.md`](reports/track_a_stress_test_results.md); raw photos are gitignored, not published)
+- [x] License comparison across the shortlisted models ([`reports/license_comparison.md`](reports/license_comparison.md))
+- [ ] Track B staged photos + human-authored ground truth (current set is an AI-authored stand-in, see `data/track_b/README.md`) — needs a human to pose/label photos, not automatable
+- [ ] Py-Feat (blocked on FFmpeg/torchcodec, see `reports/model_comparison_results.md` §1 — fixable by installing a shared-library FFmpeg build, not attempted here since it changes system PATH/installed software)
+- [ ] Florence-2, PaliGemma-mix, MiniCPM-V 2.6, LLaVA-1.5-7B — not attempted; each needs a multi-GB checkpoint download, and MiniCPM-V 2.6/LLaVA-1.5-7B are already documented above as at-or-over this repo's 6GB VRAM budget
 
 ## References
 

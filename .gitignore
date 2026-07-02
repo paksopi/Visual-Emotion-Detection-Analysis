@@ -8,3 +8,6 @@ __pycache__/
 # large downloaded dataset/model artifacts - regenerate via src/cv, src/vlm runners
 data/fer2013/test/
 data/models/
+
+# self-collected webcam stress-set photos (personal face images, not for git) - see reports/track_a_stress_test_results.md for the aggregated results
+data/track_a_stress/
