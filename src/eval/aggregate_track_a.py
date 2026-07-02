@@ -12,14 +12,22 @@ MODEL_DISPLAY = {
     "deepface": "DeepFace",
     "hsemotion": "HSEmotion / EmotiEffLib",
     "efficientface": "EfficientFace (RAF-DB checkpoint)",
+    "pyfeat": "Py-Feat (Detectorv1)",
 }
 
 
 def main():
     best_by_model = {}
+    native_by_model = {}
     for f in EVAL_DIR.glob("*_summary.json"):
         data = json.loads(f.read_text(encoding="utf-8"))
         model = data["model"]
+        if data.get("track") == "A-native":
+            if model not in native_by_model or data["n_images"] > native_by_model[model]["n_images"]:
+                native_by_model[model] = data
+            continue
+        if "metrics" not in data:
+            continue
         if model not in best_by_model or data["n_images"] > best_by_model[model]["n_images"]:
             best_by_model[model] = data
 
@@ -51,6 +59,23 @@ def main():
         lines.append("")
         if "note" in data:
             lines.append(f"> Note: {data['note']}\n")
+
+    if native_by_model:
+        lines.append("\n## Native-capability results (no emotion output)\n")
+        lines.append(
+            "Models with no built-in emotion label, run on their actual native task instead "
+            "(see each runner's docstring)."
+        )
+        for model, data in native_by_model.items():
+            lat = data["latency"]
+            lines.append(f"\n### {model}\n")
+            lines.append(f"- Capability: {data.get('capability', 'n/a')}")
+            lines.append(f"- N images: {data['n_images']}")
+            if "face_detection_rate" in data:
+                lines.append(f"- Face detection rate: {data['face_detection_rate']:.3f}")
+            lines.append(f"- Median latency: {lat['median_ms']:.2f}ms, p95: {lat['p95_ms']:.2f}ms")
+            if "note" in data:
+                lines.append(f"- Note: {data['note']}")
 
     out_path = EVAL_DIR / "track_a_comparison.md"
     out_path.write_text("\n".join(lines), encoding="utf-8")

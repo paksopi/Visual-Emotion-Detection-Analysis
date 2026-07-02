@@ -1,12 +1,20 @@
 """Live webcam demo: runs each Track A CV/FER model in turn against your own
-webcam feed, drawing the detected face box + predicted emotion label on
-screen, for SECONDS_PER_MODEL seconds per model.
+webcam feed, drawing the detected face box + predicted label on screen, for
+SECONDS_PER_MODEL seconds per model.
 
 Uses the same inference calls as the batch runners (run_fer.py,
 run_deepface.py, run_hsemotion.py, run_efficientface.py) so results are
 directly comparable to the FER2013 benchmark numbers in
 reports/model_comparison_results.md - only the face source changes (live
 webcam + Haar-cascade crop instead of pre-cropped FER2013 images).
+
+MediaPipe has no emotion label (see run_mediapipe.py) so its "label" here is
+the single most active blendshape instead - not a real emotion prediction.
+
+Py-Feat needs its own venv (torch/torchcodec conflict, see run_pyfeat.py) so
+it isn't in this script - use live_webcam_pyfeat_demo.py instead. The VLMs
+(Moondream2, Qwen2.5-VL, Florence-2) need whole-scene frames, not face crops,
+and take seconds per call - see live_webcam_vlm_demo.py.
 
 Run: .venv/Scripts/python src/cv/live_webcam_demo.py [seconds_per_model]
 
@@ -152,11 +160,38 @@ def make_efficientface_predictor():
     return predict
 
 
+def make_mediapipe_predictor():
+    import mediapipe as mp
+    from mediapipe.tasks import python
+    from mediapipe.tasks.python import vision
+
+    model_path = REPO_ROOT / "data" / "models" / "mediapipe" / "face_landmarker.task"
+    base_options = python.BaseOptions(model_asset_path=str(model_path))
+    options = vision.FaceLandmarkerOptions(
+        base_options=base_options, output_face_blendshapes=True, num_faces=1
+    )
+    detector = vision.FaceLandmarker.create_from_options(options)
+
+    def predict(face_bgr):
+        # No emotion label (see run_mediapipe.py docstring) - report the
+        # single most active blendshape instead, as a stand-in "label".
+        face_rgb = cv2.cvtColor(face_bgr, cv2.COLOR_BGR2RGB)
+        mp_img = mp.Image(image_format=mp.ImageFormat.SRGB, data=face_rgb)
+        result = detector.detect(mp_img)
+        if not result.face_blendshapes:
+            return None
+        top = max(result.face_blendshapes[0], key=lambda c: c.score)
+        return f"{top.category_name} ({top.score:.2f})"
+
+    return predict
+
+
 MODELS = [
     ("fer (mini-xception)", make_fer_predictor),
     ("DeepFace", make_deepface_predictor),
     ("HSEmotion", make_hsemotion_predictor),
     ("EfficientFace", make_efficientface_predictor),
+    ("MediaPipe (top blendshape, no emotion label)", make_mediapipe_predictor),
 ]
 
 

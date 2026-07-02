@@ -6,6 +6,7 @@
 | HSEmotion / EmotiEffLib | 7178 | 0.527 | 0.499 | 8.54 | 10.85 | 368 |
 | EfficientFace (RAF-DB checkpoint) | 6178 | 0.525 | 0.450 | 11.07 | 15.51 | 17 |
 | fer (justinshenk/fer, mini-xception weights) | 7178 | 0.490 | 0.428 | 0.68 | 0.97 | 342 |
+| Py-Feat (Detectorv1) | 7178 | 0.489 | 0.427 | 101.70 | 109.98 | 932 |
 
 ## Confusion matrices (rows=true, cols=predicted)
 
@@ -60,3 +61,28 @@
 | neutral | 103 | 8 | 86 | 58 | 169 | 68 | 676 |
 
 > Note: model has an 8th class (contempt) not present in FER2013 ground truth
+
+### Py-Feat (Detectorv1)
+
+| true\pred | angry | disgust | fear | happy | sad | surprise | neutral |
+|---|---|---|---|---|---|---|---|
+| angry | 556 | 49 | 39 | 40 | 105 | 78 | 80 |
+| disgust | 47 | 36 | 1 | 5 | 15 | 3 | 4 |
+| fear | 263 | 12 | 133 | 67 | 241 | 157 | 123 |
+| happy | 101 | 24 | 26 | 1272 | 67 | 171 | 72 |
+| sad | 296 | 20 | 36 | 58 | 461 | 91 | 212 |
+| surprise | 99 | 4 | 166 | 45 | 22 | 441 | 37 |
+| neutral | 234 | 12 | 21 | 94 | 217 | 116 | 512 |
+
+
+## Native-capability results (no emotion output)
+
+Models with no built-in emotion label, run on their actual native task instead (see each runner's docstring).
+
+### mediapipe
+
+- Capability: face landmarks + 52 ARKit-style blendshape coefficients (no built-in emotion label)
+- N images: 7178
+- Face detection rate: 0.850
+- Median latency: 8.83ms, p95: 10.94ms
+- Note: This is not an emotion-accuracy benchmark -- MediaPipe has no emotion output. The per-label blendshape means show which facial-movement coefficients are most active on average for images from each FER2013 folder, as a proxy for whether its landmark geometry tracks emotion-adjacent expression at all.

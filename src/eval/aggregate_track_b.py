@@ -44,6 +44,26 @@ def main():
             f"{lat.get('median_ms', float('nan')):.0f} | {res.get('peak_vram_mb', float('nan')):.0f} |"
         )
 
+    best_native = {}
+    for f in EVAL_DIR.glob("*_summary.json"):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        if data.get("track") != "B-native":
+            continue
+        model = data["model"]
+        if model not in best_native or data["n_images"] > best_native[model]["n_images"]:
+            best_native[model] = data
+    if best_native:
+        lines.append("\n## Native-capability results (no open-ended emotion prompting)\n")
+        for model, data in best_native.items():
+            lat = data["latency"]
+            lines.append(f"\n### {model}\n")
+            lines.append(f"- Capability: {data.get('capability', 'n/a')}")
+            lines.append(f"- N images: {data['n_images']}")
+            lines.append(f"- Median latency: {lat['median_ms']:.2f}ms, p95: {lat['p95_ms']:.2f}ms")
+            lines.append(f"- Peak VRAM: {data.get('peak_vram_mb', float('nan')):.0f}MB")
+            if "note" in data:
+                lines.append(f"- Note: {data['note']}")
+
     out_path = EVAL_DIR / "track_b_comparison.md"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     print("wrote", out_path)

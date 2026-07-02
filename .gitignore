@@ -1,9 +1,13 @@
 .venv/
+.venv-pyfeat/
 .venvs/
 .cache/
 __pycache__/
 *.pyc
 *.egg-info/
+
+# vendored FFmpeg shared-library build for Py-Feat/torchcodec (Windows only, large binaries)
+bin/
 
 # large downloaded dataset/model artifacts - regenerate via src/cv, src/vlm runners
 data/fer2013/test/

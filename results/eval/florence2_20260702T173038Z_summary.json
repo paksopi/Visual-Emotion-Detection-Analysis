@@ -1,0 +1,17 @@
+{
+  "model": "florence2",
+  "track": "B-native",
+  "run_id": "20260702T173038Z",
+  "capability": "native task-token dense captioning (no open-ended prompting -- see docstring)",
+  "task_token_used": "<DETAILED_CAPTION>",
+  "n_params_m": 231.4,
+  "latency": {
+    "n": 20,
+    "median_ms": 672.6567999999133,
+    "p95_ms": 1001.7010999999911,
+    "mean_ms": 755.7839899999635
+  },
+  "peak_vram_mb": 2050.3681640625,
+  "n_images": 20,
+  "note": "Not scored against the Track B emotion rubric -- Florence-2-base cannot take an open-ended emotion prompt at all (confirmed: '<VQA>What emotion...' degenerates to garbled output, not a real answer). This captures what it's actually good at: dense, detailed scene captioning, which a downstream system could still use as a cheap (231M param) scene-description signal even without direct emotion reasoning."
+}
