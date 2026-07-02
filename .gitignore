@@ -4,3 +4,7 @@
 __pycache__/
 *.pyc
 *.egg-info/
+
+# large downloaded dataset/model artifacts - regenerate via src/cv, src/vlm runners
+data/fer2013/test/
+data/models/

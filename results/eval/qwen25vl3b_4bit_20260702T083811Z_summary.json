@@ -1,0 +1,15 @@
+{
+  "model": "qwen25vl3b_4bit",
+  "track": "B",
+  "run_id": "20260702T083811Z",
+  "latency": {
+    "n": 20,
+    "median_ms": 11427.712299999257,
+    "p95_ms": 16913.35919999983,
+    "mean_ms": 11587.864909999917
+  },
+  "peak_vram_mb": 2678.02783203125,
+  "n_images": 20,
+  "prompt": "Describe the emotional state of the main person in this image and explain your reasoning using visible details from the whole scene (posture, environment, objects, activity) - not just their face.",
+  "quantization": "4-bit nf4"
+}
