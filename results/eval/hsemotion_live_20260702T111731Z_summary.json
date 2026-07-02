@@ -1,0 +1,15 @@
+{
+  "model": "hsemotion_live",
+  "track": "live-webcam",
+  "run_id": "20260702T111731Z",
+  "seconds": 15,
+  "n_frames": 227,
+  "n_frames_with_face": 227,
+  "label_counts": {
+    "surprise": 84,
+    "neutral": 65,
+    "happy": 64,
+    "angry": 13,
+    "contempt": 1
+  }
+}
