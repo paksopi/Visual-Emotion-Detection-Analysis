@@ -1,0 +1,93 @@
+{
+  "model": "hsemotion",
+  "track": "A",
+  "run_id": "20260702T155134Z",
+  "metrics": {
+    "accuracy": 0.55,
+    "macro_f1": 0.4404761904761905,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        3
+      ]
+    ],
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "sad",
+      "surprise",
+      "neutral"
+    ],
+    "n": 20
+  },
+  "latency": {
+    "n": 20,
+    "median_ms": 7.850550000512158,
+    "p95_ms": 8.492799999658018,
+    "mean_ms": 8.297089999996388
+  },
+  "peak_vram_mb": 1170.0,
+  "n_images": 20,
+  "note": "model has an 8th class (contempt) not present in FER2013 ground truth"
+}

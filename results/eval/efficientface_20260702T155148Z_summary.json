@@ -1,0 +1,93 @@
+{
+  "model": "efficientface",
+  "track": "A",
+  "run_id": "20260702T155148Z",
+  "metrics": {
+    "accuracy": 0.5,
+    "macro_f1": 0.453968253968254,
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ]
+    ],
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "sad",
+      "surprise",
+      "neutral"
+    ],
+    "n": 20
+  },
+  "latency": {
+    "n": 20,
+    "median_ms": 9.33785000052012,
+    "p95_ms": 11.201100000107544,
+    "mean_ms": 74.0859750000709
+  },
+  "peak_vram_mb": 16.5068359375,
+  "n_images": 20,
+  "note": "RAF-DB label-index order assumed, not confirmed against upstream training code"
+}

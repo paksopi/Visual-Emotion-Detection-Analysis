@@ -1,0 +1,14 @@
+{
+  "model": "moondream2",
+  "track": "B",
+  "run_id": "20260702T160033Z",
+  "latency": {
+    "n": 20,
+    "median_ms": 5358.339699999306,
+    "p95_ms": 7077.466000000641,
+    "mean_ms": 5349.2809450001005
+  },
+  "peak_vram_mb": 4474.88134765625,
+  "n_images": 20,
+  "prompt": "Describe the emotional state of the main person in this image and explain your reasoning using visible details from the whole scene (posture, environment, objects, activity) - not just their face."
+}
