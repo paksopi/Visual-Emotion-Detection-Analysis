@@ -5,18 +5,31 @@ the 14 candidates in [`ref/visual_emotion_detection_models.md`](../ref/visual_em
 will be evaluated once benchmarking starts, so the eventual run is apples-to-apples instead of
 ad hoc.
 
+**Pre-check completed 2026-07-02:** before writing this plan, every candidate was verified against
+its official docs to confirm it actually does emotion detection out of the box, not just an
+adjacent vision task — see §4 of the survey doc. Two Track A models (**MediaPipe**, **OpenFace**)
+don't output an emotion label at all (landmarks/AUs only) and are excluded from Track A's
+head-to-head accuracy benchmark below unless a classifier is built on top of them first; they're
+listed as face-tracking front ends, not candidates, until that exists. Two Track B models
+(**Florence-2**, **PaliGemma**) needed a checkpoint correction (base → instruction-tuned) before
+they're promptable at all — the survey doc has been corrected; Track B runs must use the corrected
+checkpoints.
+
 ## 1. Why one eval protocol doesn't fit both categories
 
 The two model families in the survey answer fundamentally different questions and can't be scored
 on the same rubric:
 
-- **CV/FER models** (Mini-Xception, MediaPipe, `fer`, DeepFace, EmotiEffLib, EfficientFace,
-  Py-Feat, OpenFace) output a fixed categorical label (Happy/Sad/Neutral/...) from a cropped face.
-  This is a closed-set classification problem — standard ML metrics apply directly.
-- **VLMs** (Florence-2, Qwen2.5-VL-3B, Moondream2, PaliGemma, MiniCPM-V, LLaVA) output free-text
-  reasoning about the whole scene. There's no fixed label to score against; correctness has to be
-  judged, not matched. Treating them with the same accuracy/F1 harness as the CV models would
-  understate what they're actually for (contextual "why", not just "what").
+- **CV/FER models** (Mini-Xception, `fer`, DeepFace, EmotiEffLib, EfficientFace, Py-Feat — 6 of the
+  8 surveyed) output a fixed categorical label (Happy/Sad/Neutral/...) from a cropped face. This is
+  a closed-set classification problem — standard ML metrics apply directly. MediaPipe and OpenFace
+  are excluded from this head-to-head; they only produce landmarks/Action Units, not an emotion
+  label (§4 of the survey doc).
+- **VLMs** (Qwen2.5-VL-3B, Moondream2, MiniCPM-V, LLaVA, plus Florence-2 and PaliGemma once
+  pointed at their instruction-tuned checkpoints) output free-text reasoning about the whole scene.
+  There's no fixed label to score against; correctness has to be judged, not matched. Treating them
+  with the same accuracy/F1 harness as the CV models would understate what they're actually for
+  (contextual "why", not just "what").
 
 So the plan splits into two tracks that share infrastructure (same hardware, same logging format)
 but different scoring.
