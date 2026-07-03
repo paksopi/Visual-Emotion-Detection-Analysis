@@ -1,0 +1,15 @@
+{
+  "model": "fer_live",
+  "track": "live-webcam",
+  "run_id": "20260703T073817Z",
+  "seconds": 15.0,
+  "n_frames": 372,
+  "n_frames_with_face": 372,
+  "label_counts": {
+    "neutral": 193,
+    "happy": 93,
+    "sad": 18,
+    "angry": 39,
+    "surprise": 29
+  }
+}

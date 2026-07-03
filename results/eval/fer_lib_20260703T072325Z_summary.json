@@ -1,0 +1,96 @@
+{
+  "model": "fer_lib",
+  "track": "unified",
+  "run_id": "20260703T072325Z",
+  "model_type": "FER",
+  "test": "unified FER2013 sample (n=150)",
+  "metrics": {
+    "accuracy": 0.5066666666666667,
+    "macro_f1": 0.42943008534917054,
+    "confusion_matrix": [
+      [
+        9,
+        0,
+        1,
+        2,
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        3,
+        3,
+        7,
+        2,
+        4
+      ],
+      [
+        5,
+        0,
+        0,
+        23,
+        4,
+        0,
+        4
+      ],
+      [
+        3,
+        0,
+        0,
+        1,
+        11,
+        0,
+        5
+      ],
+      [
+        2,
+        0,
+        1,
+        0,
+        0,
+        13,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        4,
+        8,
+        0,
+        17
+      ]
+    ],
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "sad",
+      "surprise",
+      "neutral"
+    ],
+    "n": 150
+  },
+  "latency": {
+    "n": 150,
+    "median_ms": 0.5600000004051253,
+    "p95_ms": 0.8887000003596768,
+    "mean_ms": 0.6611193334538257
+  },
+  "peak_vram_mb": 0.0,
+  "n_images": 150,
+  "license_id": "mit",
+  "production_eligible": true
+}

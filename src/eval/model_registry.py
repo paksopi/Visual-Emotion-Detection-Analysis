@@ -80,7 +80,7 @@ register(ModelAdapter(
     modality="face_crop_bgr", output_kind="native_other",
     make_predictor=lambda: __import__("cv.live_webcam_demo", fromlist=["make_mediapipe_predictor"]).make_mediapipe_predictor(),
     use_torch_vram=False, license_id="apache-2.0", production_eligible=False,
-    notes="No built-in emotion label - outputs blendshapes/landmarks only. Not an emotion-detection candidate.",
+    notes="UNLISTED - incapable: no built-in emotion label, outputs blendshapes/landmarks only.",
 ))
 
 register(ModelAdapter(
@@ -112,7 +112,7 @@ register(ModelAdapter(
     modality="scene_rgb", output_kind="free_text",
     make_predictor=lambda: __import__("vlm.live_webcam_vlm_demo", fromlist=["make_qwen25vl_predictor"]).make_qwen25vl_predictor()[0],
     use_torch_vram=True, license_id="qwen-research", production_eligible=False,
-    notes="HARD EXCLUDED from production shortlist: Qwen Research License, not commercial. Kept for reference/analysis only.",
+    notes="UNLISTED - license: Qwen Research License, non-commercial. No numbers included in the unified comparison.",
 ))
 
 register(ModelAdapter(
@@ -135,8 +135,8 @@ register(ModelAdapter(
     modality="scene_rgb", output_kind="free_text",
     make_predictor=lambda: __import__("vlm.live_webcam_vlm_demo", fromlist=["make_qwen25vl_fast_predictor"]).make_qwen25vl_fast_predictor()[0],
     use_torch_vram=True, license_id="qwen-research", production_eligible=False,
-    notes=("Same model as 'qwen25vl3b_4bit', short one-word-answer prompt - measured ~1.2s/call vs "
-           "~10-17s. Still HARD EXCLUDED from production shortlist on license grounds regardless of speed."),
+    notes=("UNLISTED - license: same model as 'qwen25vl3b_4bit', short one-word-answer prompt - "
+           "measured ~1.2s/call vs ~10-17s, but still Qwen Research License regardless of speed."),
 ))
 
 register(ModelAdapter(
@@ -144,7 +144,68 @@ register(ModelAdapter(
     modality="scene_rgb", output_kind="native_other",
     make_predictor=lambda: __import__("vlm.live_webcam_vlm_demo", fromlist=["make_florence2_predictor"]).make_florence2_predictor()[0],
     use_torch_vram=True, license_id="mit", production_eligible=False,
-    notes=("Not an emotion-detection candidate: task-token model, not instruction-tuned - there is no "
-           "free-text emotion prompt to set for it. Its <1s/call speed reflects a cheap captioning task, "
-           "not comparable emotion-detection capability. Never scored against fer2013_accuracy or a rubric."),
+    notes=("UNLISTED - incapable: task-token model, not instruction-tuned - there is no free-text "
+           "emotion prompt to set for it. Never scored on accuracy; no numbers included in the "
+           "unified comparison."),
+))
+
+register(ModelAdapter(
+    key="paligemma_mix_fast", display_name="PaliGemma-mix-224 (fast, one-word emotion)",
+    modality="scene_rgb", output_kind="free_text",
+    make_predictor=lambda: __import__("vlm.live_webcam_vlm_demo", fromlist=["make_paligemma_fast_predictor"]).make_paligemma_fast_predictor()[0],
+    use_torch_vram=True, license_id="gemma", production_eligible=True,
+    notes=("Instruction-tuned -mix-224 checkpoint (the raw -pt-224 pretrained checkpoint surveyed "
+           "originally cannot be prompted at all - see ref/visual_emotion_detection_models.md). "
+           "Short one-word-answer prompt only, same policy as moondream2_fast/qwen25vl3b_4bit_fast."),
+))
+
+register(ModelAdapter(
+    key="minicpmv26_fast", display_name="MiniCPM-V 2.6 (fast, one-word emotion, 4-bit)",
+    modality="scene_rgb", output_kind="free_text",
+    make_predictor=lambda: (_ for _ in ()).throw(
+        NotImplementedError("minicpmv26_fast: cancelled, no runner attempted - see notes")
+    ),
+    use_torch_vram=True, license_id="apache-2.0", production_eligible=False,
+    notes=("UNLISTED - cancelled (2026-07-03, user call, local storage): its remote-code image "
+           "processor (image_processing_minicpmv.py) raised a shape-mismatch error against this "
+           "repo's pinned transformers==4.49.0 - a known class of incompatibility (MiniCPM-V-2_6's "
+           "repo code targets an older transformers release), same pattern as Py-Feat's separate "
+           ".venv-pyfeat. Would need its own isolated venv with an older transformers pin to run at "
+           "all; the ~16GB fp16 checkpoint download was deleted to free local disk space and this "
+           "candidate is not being pursued further. Revisit only if disk space and a dedicated venv "
+           "are both available."),
+))
+
+register(ModelAdapter(
+    key="llava15_7b", display_name="LLaVA-1.5-7B",
+    modality="scene_rgb", output_kind="free_text",
+    make_predictor=lambda: (_ for _ in ()).throw(
+        NotImplementedError("llava15_7b: no runner built - excluded before any code was written, see notes")
+    ),
+    use_torch_vram=True, license_id="unknown", production_eligible=False,
+    notes="UNLISTED - exceeds the 6GB VRAM budget outright. No runner built, no numbers collected.",
+))
+
+register(ModelAdapter(
+    key="openface2", display_name="OpenFace 2.x",
+    modality="face_crop_bgr", output_kind="native_other",
+    make_predictor=lambda: (_ for _ in ()).throw(
+        NotImplementedError("openface2: no runner built - excluded before any code was written, see notes")
+    ),
+    use_torch_vram=False, license_id="openface-academic", production_eligible=False,
+    notes=("UNLISTED - incapable AND license-restricted: only outputs Action Units, no built-in "
+           "emotion label, and CMU's academic/non-commercial license excludes it from shipping "
+           "regardless. No runner built, no numbers collected."),
+))
+
+register(ModelAdapter(
+    key="openface3", display_name="OpenFace 3.0",
+    modality="face_crop_bgr", output_kind="closed_set_emotion",
+    make_predictor=lambda: (_ for _ in ()).throw(
+        NotImplementedError("openface3: no runner built - excluded before any code was written, see notes")
+    ),
+    use_torch_vram=False, license_id="openface3-academic", production_eligible=False,
+    notes=("UNLISTED - license: adds a real emotion head (fixing 2.x's capability gap) but the "
+           "CMU-MultiComp-Lab/OpenFace-3.0 LICENSE file is academic/non-profit non-commercial only, "
+           "same terms as 2.x. Rejected at the license gate before any runner was built."),
 ))

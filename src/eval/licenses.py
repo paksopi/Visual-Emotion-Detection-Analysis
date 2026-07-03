@@ -18,6 +18,7 @@ LICENSE_REGISTRY: dict[str, dict] = {
         "name": "OpenFace 3.0 Software License Agreement - Academic/Non-Profit Noncommercial Research Use Only (CMU)",
         "commercial_ok": False,
     },
+    "gemma": {"name": "Gemma Terms of Use (Google)", "commercial_ok": True},
     "unknown": {"name": "Unknown / unverified", "commercial_ok": False},
 }
 

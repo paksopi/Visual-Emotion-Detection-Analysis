@@ -36,6 +36,22 @@ def pick_best_summary(model_key: str, track_filter=None) -> dict | None:
     return best
 
 
+def unified_summary_for_model(model_key: str) -> dict | None:
+    """Most recent unified_accuracy run for model_key (track="unified") -
+    NOT pick_best_summary, which maximizes n_images and would prefer a much
+    larger old Track A fer2013_accuracy run over the smaller shared sample
+    every model is actually compared on here.
+    """
+    candidates = sorted(EVAL_DIR.glob(f"{model_key}_*_summary.json"))
+    best = None
+    for f in candidates:
+        data = json.loads(f.read_text(encoding="utf-8"))
+        if data.get("model") == model_key and data.get("track") == "unified":
+            if best is None or data["run_id"] > best["run_id"]:
+                best = data
+    return best
+
+
 def session_fitness_for_model(model_key: str) -> dict | None:
     candidates = sorted(EVAL_DIR.glob(f"{model_key}_fitness_*_summary.json"))
     if not candidates:

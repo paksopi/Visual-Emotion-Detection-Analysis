@@ -1,5 +1,23 @@
 # Visual Emotion Detection Models for Perception Layer
 
+## Selection criteria
+
+Every candidate model - already in this survey, or found later via a link/search - is checked
+against these in order. Failing any one is a hard exclusion regardless of the others; the model
+goes straight to the Unlisted models table (§6) with no benchmark run and no numbers anywhere in
+this repo:
+
+1. **Capability** - must produce an emotion/affect signal directly, not an adjacent output
+   (blendshapes, Action Units) with no label.
+2. **License** - commercial-use compatible (MIT/Apache-2.0/etc.). Research-only or
+   non-commercial licenses are excluded regardless of accuracy.
+3. **VRAM** - must fit inside the 6GB budget shared with the tutoring LLM itself, measured
+   peak, not vendor-quoted.
+4. **Latency** - real-time (<=300ms, synchronous), borderline (debounced async), or async-only
+   (periodic enrichment, never gates a turn) per `src/eval/session_fitness.py`.
+5. **Accuracy** - measured on the unified sample (`data/unified_eval/`, see
+   `reports/unified_comparison.md`), same metric for every model regardless of type.
+
 ## Executive Summary
 This document outlines 14 open-source models suitable for integrating visual emotion detection into local perception layers. The models are evaluated against a strict 6GB VRAM hardware constraint and are divided into two categories: ultra-lightweight Computer Vision (CV) models and deeper Vision-Language Models (VLMs).
 
@@ -78,3 +96,34 @@ usable in a commercial LLM-tutoring product:
   for onboarding** (`src/cv/run_emotiefflib_engagement.py`) — the single most
   use-case-relevant finding of this spike, since it targets session/engagement state
   directly rather than being a proxy via categorical emotion.
+
+## 6. Unlisted models
+
+Fail one or more of the selection criteria in the header above - no accuracy/latency numbers
+exist for these anywhere in this repo (README, reports, `results/`). See
+`src/eval/model_registry.py` for the authoritative `notes` field per model.
+
+| Model | Failed criterion | Reason |
+|---|---|---|
+| MediaPipe | Capability | No built-in emotion label, blendshapes/landmarks only |
+| OpenFace 2.x | Capability + License | Action Units only, no emotion label; CMU non-commercial license |
+| OpenFace 3.0 | License | Adds a real emotion head, but same CMU academic/non-commercial license as 2.x |
+| Florence-2-base | Capability | Task-token model, not instruction-tuned - no open-ended emotion prompt exists |
+| Qwen2.5-VL-3B-Instruct | License | Qwen Research License, non-commercial |
+| LLaVA-1.5-7B | VRAM | Exceeds the 6GB budget outright, no runner built |
+| MiniCPM-V 2.6 | Cancelled | Clears capability/license/VRAM on paper, but its remote code is incompatible with this repo's pinned transformers==4.49.0; ~16GB checkpoint deleted to free disk space, not pursued further |
+
+## 7. New candidates benchmarked this round (2026-07-03)
+
+Added per user request, only in short/capped-token-output form (never a long reasoning prompt),
+run through `unified_accuracy` (see `reports/unified_comparison.md`):
+
+* **PaliGemma-mix-224** - clears capability/license/VRAM criteria. Benchmark run blocked in this
+  environment: the checkpoint is a gated Hugging Face repo requiring an authenticated account
+  that has accepted Google's Gemma terms. Pending re-run once HF auth is available.
+* **MiniCPM-V 2.6** - clears capability/license (Apache-2.0 per model card, unconfirmed) and VRAM
+  on paper. HF auth was resolved, but its remote-code image processor raised a shape-mismatch
+  error against this repo's pinned `transformers==4.49.0` - a version-drift incompatibility, not
+  an auth problem. **Cancelled** (2026-07-03, user call): the ~16GB fp16 checkpoint was deleted to
+  free local disk space; not pursued further. Would need its own isolated venv (same pattern as
+  Py-Feat's `.venv-pyfeat`) with an older transformers pin to ever run.

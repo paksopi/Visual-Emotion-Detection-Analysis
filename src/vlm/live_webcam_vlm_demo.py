@@ -149,6 +149,57 @@ def make_qwen25vl_fast_predictor():
     return predict, model
 
 
+def make_paligemma_fast_predictor():
+    """PaliGemma-mix-224 (instruction-tuned checkpoint, not the raw -pt-224
+    pretrained one - see ref/visual_emotion_detection_models.md). Short-answer
+    prompt + capped max_new_tokens, same policy as the *_fast Moondream2/Qwen
+    predictors - never run PaliGemma with a long reasoning prompt here.
+    """
+    from transformers import AutoProcessor, PaliGemmaForConditionalGeneration
+
+    model_id = "google/paligemma-3b-mix-224"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = PaliGemmaForConditionalGeneration.from_pretrained(
+        model_id, torch_dtype=torch.float16, device_map={"": device}
+    )
+    processor = AutoProcessor.from_pretrained(model_id)
+
+    def predict(frame_rgb):
+        img = Image.fromarray(frame_rgb)
+        inputs = processor(text=SHORT_EMOTION_PROMPT, images=img, return_tensors="pt").to(device, torch.float16)
+        with torch.no_grad():
+            out = model.generate(**inputs, max_new_tokens=10)
+        trimmed = out[0][inputs["input_ids"].shape[-1]:]
+        return processor.decode(trimmed, skip_special_tokens=True).strip()
+
+    return predict, model
+
+
+def make_minicpmv_fast_predictor():
+    """MiniCPM-V 2.6 (openbmb/MiniCPM-V-2_6), 4-bit quantized - near the 6GB
+    ceiling at fp16 (see ref/visual_emotion_detection_models.md), so this is
+    the only viable precision under the budget. Short-answer prompt only.
+    """
+    from transformers import AutoModel, AutoTokenizer, BitsAndBytesConfig
+
+    model_id = "openbmb/MiniCPM-V-2_6"
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16, bnb_4bit_quant_type="nf4"
+    )
+    model = AutoModel.from_pretrained(
+        model_id, trust_remote_code=True, quantization_config=bnb_config, attn_implementation="sdpa",
+    ).eval()
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+
+    def predict(frame_rgb):
+        img = Image.fromarray(frame_rgb)
+        msgs = [{"role": "user", "content": [img, SHORT_EMOTION_PROMPT]}]
+        answer = model.chat(image=None, msgs=msgs, tokenizer=tokenizer, max_new_tokens=10)
+        return answer.strip()
+
+    return predict, model
+
+
 def make_florence2_predictor():
     from transformers import AutoModelForCausalLM, AutoProcessor
 
@@ -179,6 +230,8 @@ MODELS = [
     ("Florence-2 (native captioning, no emotion prompt)", make_florence2_predictor),
     ("Moondream2 (fast, one-word emotion)", make_moondream2_fast_predictor),
     ("Qwen2.5-VL-3B (fast, one-word emotion)", make_qwen25vl_fast_predictor),
+    ("PaliGemma-mix-224 (fast, one-word emotion)", make_paligemma_fast_predictor),
+    ("MiniCPM-V 2.6 (fast, one-word emotion, 4-bit)", make_minicpmv_fast_predictor),
 ]
 
 

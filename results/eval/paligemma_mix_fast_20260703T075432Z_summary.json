@@ -1,0 +1,96 @@
+{
+  "model": "paligemma_mix_fast",
+  "track": "unified",
+  "run_id": "20260703T075432Z",
+  "model_type": "VLM",
+  "test": "unified FER2013 sample (n=5)",
+  "metrics": {
+    "accuracy": 0.4,
+    "macro_f1": 0.1142857142857143,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "sad",
+      "surprise",
+      "neutral"
+    ],
+    "n": 5
+  },
+  "latency": {
+    "n": 5,
+    "median_ms": 220.16569999686908,
+    "p95_ms": 1735.8487999990757,
+    "mean_ms": 520.8645799990336
+  },
+  "peak_vram_mb": 5635.994140625,
+  "n_images": 5,
+  "license_id": "gemma",
+  "production_eligible": true
+}

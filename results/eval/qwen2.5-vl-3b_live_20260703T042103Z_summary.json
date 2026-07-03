@@ -1,7 +1,0 @@
-{
-  "model": "qwen2.5-vl-3b_live",
-  "track": "live-webcam",
-  "run_id": "20260703T042103Z",
-  "seconds": 15.0,
-  "n_calls": 1
-}

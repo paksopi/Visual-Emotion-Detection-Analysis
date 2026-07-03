@@ -70,20 +70,22 @@ def sort_key(row: dict):
 
 
 def render(rows: list[dict]) -> str:
+    eligible = [r for r in rows if r["production_eligible"]]
+    unlisted = [r for r in rows if not r["production_eligible"]]
+
     lines = ["# Production candidate comparison (Track C)\n"]
     lines.append(
-        "Every model registered in `src/eval/model_registry.py`, compared across latency/VRAM, "
-        "accuracy or rubric score, real-time session-fitness (see `src/eval/session_fitness.py`), "
-        "and license/production-eligibility (see `src/eval/licenses.py`). Sorted so eligible/fast/"
-        "accurate candidates surface first - license-excluded or too-slow candidates are still shown "
-        "below for reference, not omitted.\n"
+        "Production-eligible models registered in `src/eval/model_registry.py`, compared across "
+        "latency/VRAM, accuracy or rubric score, and real-time session-fitness (see "
+        "`src/eval/session_fitness.py`). License-restricted, incapable, or over-VRAM-budget models "
+        "are never given numbers here - see the Unlisted models section below.\n"
     )
     lines.append(
         "| Model | Kind | N | Median (ms) | p95 (ms) | Fitness | Peak VRAM (MB) | Accuracy | "
-        "Macro-F1 | Rubric avg (/5) | License | Commercial OK | License-eligible* |"
+        "Macro-F1 | Rubric avg (/5) | License |"
     )
-    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
-    for r in sorted(rows, key=sort_key):
+    lines.append("|---|---|---|---|---|---|---|---|---|---|---|")
+    for r in sorted(eligible, key=sort_key):
         def fmt(v, spec=""):
             return "n/a" if v is None else format(v, spec)
         lines.append(
@@ -91,12 +93,24 @@ def render(rows: list[dict]) -> str:
             f"{fmt(r['median_ms'], '.2f')} | {fmt(r['p95_ms'], '.2f')} | "
             f"{r['fitness_bucket'] or 'n/a'} | {fmt(r['peak_vram_mb'], '.0f')} | "
             f"{fmt(r['accuracy'], '.3f')} | {fmt(r['macro_f1'], '.3f')} | "
-            f"{fmt(r['rubric_avg'], '.2f')} | {r['license_name']} | "
-            f"{'✅' if r['commercial_ok'] else '⚠️ restricted'} | "
-            f"{'✅' if r['production_eligible'] else '—'} |"
+            f"{fmt(r['rubric_avg'], '.2f')} | {r['license_name']} |"
         )
 
-    shortlist = [r for r in rows if r["production_eligible"] and r["fitness_pass"]]
+    lines.append("\n## Unlisted models\n")
+    lines.append(
+        "Fail capability, license, or VRAM-budget criteria - no benchmark numbers exist for these "
+        "anywhere in this repo.\n"
+    )
+    lines.append("| Model | Reason |")
+    lines.append("|---|---|")
+    for r in sorted(unlisted, key=lambda r: r["display_name"]):
+        adapter = MODEL_REGISTRY.get(r["model"])
+        reason = adapter.notes if adapter and adapter.notes else (
+            "restricted license" if not r["commercial_ok"] else "not production-eligible"
+        )
+        lines.append(f"| {r['display_name']} | {reason} |")
+
+    shortlist = [r for r in eligible if r["fitness_pass"]]
     lines.append("\n## Shortlist (production-eligible AND real-time-fit)\n")
     if shortlist:
         for r in sorted(shortlist, key=sort_key):

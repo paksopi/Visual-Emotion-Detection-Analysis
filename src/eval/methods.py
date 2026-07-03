@@ -24,7 +24,9 @@ if str(REPO_ROOT / "src") not in sys.path:
 from eval import LatencyTimer, VRAMTracker, classification_metrics, RunLogger  # noqa: E402
 from eval.model_registry import ModelAdapter  # noqa: E402
 from eval import session_fitness as _session_fitness  # noqa: E402
+from eval.label_mapping import map_to_fer2013_label  # noqa: E402
 
+UNIFIED_MANIFEST = REPO_ROOT / "data" / "unified_eval" / "manifest.csv"
 FER2013_MANIFEST = REPO_ROOT / "data" / "fer2013" / "test_manifest_shuffled.csv"
 FER2013_LABELS = ["angry", "disgust", "fear", "happy", "sad", "surprise", "neutral"]
 # Canonical FER2013 folder-name -> label mapping - a property of the dataset,
@@ -153,6 +155,66 @@ class Fer2013AccuracyMethod:
         return {"summary_path": str(out), **summary}
 
 
+class UnifiedAccuracyMethod:
+    """Runs a model (CV/FER or VLM) against the SAME sample of FER2013 images
+    (data/unified_eval/manifest.csv, see build_unified_sample.py) and scores
+    it with the same accuracy metric, so Model | Type | Test | Speed |
+    Accuracy is one directly-comparable table instead of two separate tracks
+    with different test sets and different metrics.
+
+    VLM adapters must be registered with a short/capped-token predictor
+    (e.g. the *_fast keys) - free text is mapped to a FER2013 label via
+    eval.label_mapping before scoring; unmappable text counts as a miss.
+    """
+    name = "unified_accuracy"
+    applicable_output_kinds = {"closed_set_emotion", "free_text"}
+    applicable_modalities = {"face_crop_bgr", "scene_rgb"}
+
+    def run(self, adapter: ModelAdapter, limit: Optional[int] = None) -> dict:
+        _check_applicable(self, adapter)
+        if not UNIFIED_MANIFEST.exists():
+            raise FileNotFoundError(
+                f"{UNIFIED_MANIFEST} not found - run "
+                "`python src/eval/build_unified_sample.py` first."
+            )
+        predict_fn = adapter.make_predictor()
+        rows = list(csv.DictReader(open(UNIFIED_MANIFEST, encoding="utf-8")))
+        if limit:
+            rows = rows[:limit]
+        model_type = "VLM" if adapter.modality == "scene_rgb" else "FER"
+        logger = RunLogger(model_name=adapter.key, track="unified")
+        timer = LatencyTimer()
+        y_true, y_pred = [], []
+        try:
+            with VRAMTracker(use_torch=adapter.use_torch_vram) as vram:
+                for row in rows:
+                    img_bgr = cv2.imread(str(REPO_ROOT / row["path"]))
+                    true_label = FER2013_DATASET_LABEL_MAP[row["label"]]
+                    if adapter.modality == "face_crop_bgr":
+                        with timer.measure():
+                            raw = predict_fn(img_bgr)
+                        pred = raw if raw in FER2013_LABELS else None
+                    else:
+                        frame_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+                        with timer.measure():
+                            raw = predict_fn(frame_rgb)
+                        pred = map_to_fer2013_label(raw)
+                    y_true.append(true_label)
+                    y_pred.append(pred or "unmapped")
+                    logger.record(image=row["path"], true=true_label, raw=raw, pred=pred)
+            metrics = classification_metrics(y_true, y_pred, labels=FER2013_LABELS)
+            summary = {
+                "model_type": model_type, "test": f"unified FER2013 sample (n={len(rows)})",
+                "metrics": metrics, "latency": timer.summary(), "peak_vram_mb": vram.peak_mb(),
+                "n_images": len(rows), "license_id": adapter.license_id,
+                "production_eligible": adapter.production_eligible,
+            }
+            out = logger.write_summary(summary)
+        finally:
+            logger.close()
+        return {"summary_path": str(out), **summary}
+
+
 class SessionFitnessMethod:
     name = "session_fitness"
     applicable_output_kinds = {"closed_set_emotion", "native_other", "engagement", "free_text"}
@@ -165,5 +227,6 @@ class SessionFitnessMethod:
 METHOD_REGISTRY: dict[str, Method] = {
     "latency_vram": LatencyVramMethod(),
     "fer2013_accuracy": Fer2013AccuracyMethod(),
+    "unified_accuracy": UnifiedAccuracyMethod(),
     "session_fitness": SessionFitnessMethod(),
 }

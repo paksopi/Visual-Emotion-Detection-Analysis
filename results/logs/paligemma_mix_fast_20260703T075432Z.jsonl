@@ -1,0 +1,5 @@
+{"ts": "2026-07-03T07:54:34.092686+00:00", "image": "data/fer2013/test/happy/02586.jpg", "true": "happy", "raw": "happy", "pred": "happy"}
+{"ts": "2026-07-03T07:54:34.315357+00:00", "image": "data/fer2013/test/disgusted/01037.jpg", "true": "disgust", "raw": "sad", "pred": "sad"}
+{"ts": "2026-07-03T07:54:34.531602+00:00", "image": "data/fer2013/test/neutral/05052.jpg", "true": "neutral", "raw": "happy", "pred": "happy"}
+{"ts": "2026-07-03T07:54:34.746855+00:00", "image": "data/fer2013/test/happy/03400.jpg", "true": "happy", "raw": "happy", "pred": "happy"}
+{"ts": "2026-07-03T07:54:35.003585+00:00", "image": "data/fer2013/test/neutral/04199.jpg", "true": "neutral", "raw": "surprised", "pred": "surprise"}
