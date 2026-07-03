@@ -144,9 +144,55 @@ practice.
 | `reports/` | `evaluation_plan.md` (methodology), `model_comparison_results.md` (actual results + caveats), `license_comparison.md` (license per shortlisted model), `track_a_stress_test_results.md` (occlusion/lighting robustness check) |
 | `src/cv/` | Track A runner scripts — one per CV/FER model (`run_deepface.py`, `run_fer.py`, `run_hsemotion.py`, `run_efficientface.py`, `run_pyfeat.py`), plus `run_mediapipe.py` (native blendshapes/landmarks, no emotion label) — and `live_webcam_demo.py` / `live_webcam_pyfeat_demo.py` (live-camera demos, see below) and `collect_track_a_stress_set.py` (occlusion/lighting stress-set capture + eval) |
 | `src/vlm/` | Track B runner scripts — one per VLM (`run_moondream2.py`, `run_qwen25vl.py`), plus `run_florence2.py` (native dense captioning, no open-ended emotion prompting) and `live_webcam_vlm_demo.py` (live-camera demo, see below) |
-| `src/eval/` | Shared harness: latency timer, VRAM tracker, classification metrics, rubric scoring, run logging, and the `aggregate_track_a.py` / `aggregate_track_b.py` comparison-table generators |
+| `src/eval/` | Shared harness: latency timer, VRAM tracker, classification metrics, rubric scoring, run logging, and the `aggregate_track_a.py` / `aggregate_track_b.py` comparison-table generators, plus Track C's `model_registry.py` / `methods.py` / `run_method.py` / `session_fitness.py` / `licenses.py` / `aggregate_production_candidates.py` (see below) |
 | `data/` | FER2013 manifests + a 20-image Track B scene-context set with authored ground truth (`data/track_b/README.md` explains provenance/limitations); large downloaded images and model checkpoints are gitignored and regenerate via the runner scripts; `track_a_stress/` (self-collected webcam photos) is gitignored — personal face images, not published |
 | `results/` | `eval/` — aggregated comparison tables, confusion matrices, and rubric scores; `logs/` — raw per-image/per-call outputs for every run |
+
+## Track C — picking one production model
+
+Tracks A/B above answer "how does each model perform." Track C answers a
+narrower, practical question on top: **which single model should actually
+ship**, for a real-time perception layer that reads a student's
+emotional/engagement state during a live LLM tutoring session and steers the
+LLM's tone/response. That needs latency judged against an actual real-time
+budget (not just "fast" in the abstract) and license eligibility as a
+first-class, checkable field — not just performance ranking.
+
+It's an **additive layer** — every Track A/B runner, aggregator, and report
+above is untouched and still authoritative for the raw benchmark numbers.
+
+```bash
+# Run any registered model through any applicable method
+.venv/Scripts/python src/eval/run_method.py --model deepface --method latency_vram
+.venv/Scripts/python src/eval/run_method.py --model deepface --method fer2013_accuracy
+.venv/Scripts/python src/eval/run_method.py --model deepface --method session_fitness
+.venv/Scripts/python src/eval/run_method.py --list   # show all registered models/methods
+
+# Regenerate the full comparison table + shortlist
+.venv/Scripts/python src/eval/session_fitness.py               # batch latency-bucket pass
+.venv/Scripts/python src/eval/aggregate_production_candidates.py
+```
+
+Output: [`reports/production_candidate_comparison.md`](reports/production_candidate_comparison.md)
+— one table across every registered model (latency/VRAM, accuracy or rubric
+score, real-time-fitness bucket, license/commercial-use eligibility), sorted
+so eligible/fast/accurate candidates surface first, closing with an
+auto-generated shortlist. Two new candidates were checked while building
+this: **OpenFace 3.0** (rejected — confirmed non-commercial-only license,
+see [`ref/visual_emotion_detection_models.md`](ref/visual_emotion_detection_models.md)
+§5) and **EmotiEffLib engagement mode** (cleared — Apache-2.0, targets
+student engagement directly, `src/cv/run_emotiefflib_engagement.py`).
+
+**VLM latency is decode-bound, not vision-bound** — cost scales with how
+many tokens the model *generates*, not the image itself. Forcing a one-word
+answer (`moondream2_fast`, `qwen25vl3b_4bit_fast` in the registry) instead of
+a reasoned explanation cuts Moondream2 from ~5s to **~0.86s/call** (crosses
+into the `borderline` session-fitness bucket) and Qwen2.5-VL-3B from
+~10-17s to **~1.2-1.4s/call** — near Florence-2's native-captioning speed,
+but with a real emotion label Florence-2 fundamentally cannot produce (it's
+a task-token model, not instruction-tuned — there's no prompt that adds
+emotion detection to it short of fine-tuning a new task token onto it with
+labeled data). Trade-off: no scene-grounded reasoning, just the label.
 
 ## Status
 
@@ -192,7 +238,9 @@ Remaining open items:
 
 ```bash
 py -3.12 -m venv .venv
-.venv/Scripts/pip install -r <deps used per runner — see src/cv/*.py and src/vlm/*.py docstrings>
+.venv/Scripts/pip install -r requirements.txt
+# torch needs its CUDA index explicitly (plain pip resolves a CPU-only build - see requirements.txt header):
+.venv/Scripts/pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision
 
 # Track A (writes results/eval/ + results/logs/)
 .venv/Scripts/python src/cv/run_deepface.py
@@ -204,6 +252,7 @@ py -3.12 -m venv .venv
 
 # Py-Feat needs its own venv (torchcodec/torch version conflict, see results doc)
 py -3.12 -m venv .venv-pyfeat
+.venv-pyfeat/Scripts/pip install -r requirements-pyfeat.txt
 .venv-pyfeat/Scripts/python src/cv/run_pyfeat.py
 
 # Track B

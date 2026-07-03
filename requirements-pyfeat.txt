@@ -1,0 +1,18 @@
+# Py-Feat needs its own separate venv (.venv-pyfeat/) - NOT the shared
+# .venv/ every other Track A model uses. Reason (see src/cv/run_pyfeat.py
+# docstring): py-feat's video-decoding dependency `torchcodec` requires
+# torch>=2.11, which conflicts with the shared venv's torch==2.6.0 pin
+# (required there for CUDA 12.4 wheel compatibility with the other models).
+#
+# .venv-pyfeat/ was not present in this working copy as of 2026-07-03, so
+# this file documents the known constraint rather than a verified pip freeze
+# - regenerate with `pip freeze > requirements-pyfeat.txt` inside that venv
+# once it's rebuilt, and remove this note.
+#
+# Also requires a native (non-pip) dependency on Windows: a shared-library
+# FFmpeg build at bin/ffmpeg-shared/ (gitignored) - the system FFmpeg is
+# typically static-only, which torchcodec can't load via os.add_dll_directory.
+
+py-feat
+torch>=2.11        # conflicts with the shared .venv's torch==2.6.0 - this is exactly why it's isolated
+torchcodec

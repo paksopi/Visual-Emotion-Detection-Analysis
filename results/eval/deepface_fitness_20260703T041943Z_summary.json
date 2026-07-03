@@ -1,0 +1,18 @@
+{
+  "model": "deepface_fitness",
+  "track": "session-fitness",
+  "run_id": "20260703T041943Z",
+  "source_summary": "deepface_20260703T034538Z_summary.json",
+  "source_track": "A",
+  "latency": {
+    "n": 7178,
+    "median_ms": 6.7424999997456325,
+    "p95_ms": 8.960600000136765,
+    "mean_ms": 7.093411228767433
+  },
+  "bucket": "realtime",
+  "verdict_pass": true,
+  "median_ms": 6.7424999997456325,
+  "threshold_ms": 300,
+  "description": "Fully non-blocking per-turn signal - safe to call synchronously in the chat-turn path."
+}

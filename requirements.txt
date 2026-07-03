@@ -1,0 +1,50 @@
+# Working dependency set for the shared .venv (Python 3.12, Windows).
+# Captured from `pip freeze` 2026-07-03. There was previously no requirements
+# file at all (pyproject.toml declares zero runtime deps) - this is a curated
+# reference snapshot, not a from-scratch installer: torch's CUDA build in
+# particular needs a non-default index and can't be expressed as a plain pin.
+#
+# Install order that actually worked this session:
+#   pip install opencv-python fer deepface hsemotion-onnx mediapipe scikit-learn tf-keras
+#   pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision
+#   pip install transformers==4.49.0 accelerate bitsandbytes qwen-vl-utils timm einops pillow
+#   pip install pyvips emotiefflib
+# Plus a native (non-pip) dependency: libvips DLL for pyvips, fetched into
+# data/vips/ - see src/vlm/live_webcam_vlm_demo.py header for the exact path
+# and download source (github.com/libvips/build-win64-mxe releases).
+
+# --- Core / shared ---
+torch==2.6.0+cu124          # --index-url https://download.pytorch.org/whl/cu124 (NOT default PyPI - that resolves to a CPU-only build)
+torchvision==0.21.0+cu124   # same index as torch
+numpy==2.5.0
+pandas==3.0.3
+pillow==12.3.0
+scikit-learn==1.9.0         # src/eval/metrics.py (classification_metrics)
+tensorflow==2.21.0          # transitive via fer/deepface/tf-keras; also required directly by emotiefflib's engagement head
+opencv-python==5.0.0.93
+opencv-contrib-python==5.0.0.93
+
+# --- Track A / CV ---
+fer==25.10.3
+deepface==0.0.100
+hsemotion-onnx==0.3.1       # legacy per-frame emotion API, still used by run_hsemotion.py
+emotiefflib==1.1.1          # successor package - adds predict_engagement(), see run_emotiefflib_engagement.py
+mediapipe==0.10.35
+facenet-pytorch==2.5.3      # DeepFace transitive dependency
+gdown==6.1.0                 # EfficientFace checkpoint download (manual, see src/cv/run_efficientface.py)
+
+# --- Track B / VLM ---
+transformers==4.49.0        # FLOOR: needed for Qwen2_5_VLForConditionalGeneration.
+                             # CEILING: Florence-2's remote code breaks on transformers 5.x
+                             # (Florence2LanguageConfig reads self.forced_bos_token_id relying
+                             # on a PretrainedConfig default that 5.x removed). Do not bump
+                             # past 4.x without re-verifying Florence-2 still loads.
+accelerate==1.14.0
+bitsandbytes==0.49.2        # 4-bit nf4 quantization for Qwen2.5-VL - required to fit in 6GB VRAM;
+                             # fp16 was measured this session at 8.08GB (spills into slow
+                             # Windows shared-GPU-memory) and 238.9ms/token vs 80-91ms/token in 4-bit
+qwen-vl-utils==0.0.14
+pyvips==3.1.1                # ALSO needs the native libvips DLL, not pip-installable on Windows - see header note above
+
+# --- Data prep (one-off scripts) ---
+datasets                    # HF `datasets`, used by src/cv/materialize_fer2013.py

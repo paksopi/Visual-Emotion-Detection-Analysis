@@ -1,0 +1,18 @@
+{
+  "model": "efficientface_fitness",
+  "track": "session-fitness",
+  "run_id": "20260703T022821Z",
+  "source_summary": "efficientface_20260702T161501Z_summary.json",
+  "source_track": "A",
+  "latency": {
+    "n": 6178,
+    "median_ms": 8.961350000390667,
+    "p95_ms": 11.178400000062538,
+    "mean_ms": 9.1290125444916
+  },
+  "bucket": "realtime",
+  "verdict_pass": true,
+  "median_ms": 8.961350000390667,
+  "threshold_ms": 300,
+  "description": "Fully non-blocking per-turn signal - safe to call synchronously in the chat-turn path."
+}

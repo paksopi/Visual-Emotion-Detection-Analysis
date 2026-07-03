@@ -119,3 +119,47 @@ pre-selected here.
   coarse emotion label, since the perception layer's stated need is emotion category, not FACS
   coding.
 - Multi-face scenes — single primary subject only, matching the perception layer's expected input.
+
+## 7. Track C — production candidate comparison (2026-07-03)
+
+Once Tracks A/B produced real numbers, a follow-on question emerged: picking exactly **one**
+model for a real-time perception layer (detecting a student's emotional/engagement state during
+a live LLM tutoring session, to steer tone/response) needs more than the raw per-track leaderboard
+above — it needs latency judged against an actual real-time budget, and license eligibility
+treated as a first-class, code-readable field rather than a separate manual cross-reference.
+
+This is implemented as an **additive layer**, not a replacement for Tracks A/B — the runners,
+aggregators (`aggregate_track_a.py`/`aggregate_track_b.py`), and their reports above are
+untouched and still the source of truth for the FER2013/scene-context benchmark numbers.
+
+**New pieces (`src/eval/`):**
+- `model_registry.py` — a `ModelAdapter` per candidate, wrapping the *existing*
+  `make_X_predictor()` closures already in `src/cv/live_webcam_demo.py` /
+  `src/vlm/live_webcam_vlm_demo.py` (zero duplicated model-loading code), tagged with
+  `output_kind`, `license_id`, and `production_eligible`.
+- `methods.py` + `run_method.py` — a `Method` abstraction (`latency_vram`, `fer2013_accuracy`,
+  `session_fitness`) so any registered model can be driven through any applicable method via one
+  CLI: `python src/eval/run_method.py --model <key> --method <name> [--limit N]`.
+- `session_fitness.py` — classifies a model's already-measured median latency into
+  `realtime` (<300ms, safe synchronously in the chat-turn path), `borderline` (300ms-1s, viable
+  async-with-debounce), or `async_only` (>1s, must run out-of-band). Not a new metric — a
+  bucketing pass over numbers `LatencyTimer` already collected.
+- `licenses.py` — `LICENSE_REGISTRY`, encoding `reports/license_comparison.md` as importable data.
+- `aggregate_production_candidates.py` — scans every model's best summary + session-fitness
+  verdict + license eligibility, writes `reports/production_candidate_comparison.md`.
+
+**Two new candidates onboarded**, found while researching what's changed in the field since the
+original 14-model survey (see `ref/visual_emotion_detection_models.md` §5 for full detail):
+- **OpenFace 3.0** — checked and **rejected at the license gate** before any runner code was
+  written: confirmed non-commercial-only (same CMU MultiComp Lab terms as OpenFace 2.x), despite
+  genuinely adding a direct emotion head this repo's original survey found missing in 2.x.
+- **EmotiEffLib engagement mode** (`emotiefflib` package, Apache-2.0, successor to the
+  `hsemotion-onnx` already used here) — cleared and onboarded
+  (`src/cv/run_emotiefflib_engagement.py`). Targets student engagement/session state directly,
+  arguably closer to the actual production signal than 7/8-class categorical emotion.
+
+Automated free-text rubric scoring (an LLM-as-judge replacement for the manual process in
+`results/eval/track_b_rubric_scores.csv`) was scoped but **deferred** — manual scoring stays the
+process for now.
+
+Output: `reports/production_candidate_comparison.md`.

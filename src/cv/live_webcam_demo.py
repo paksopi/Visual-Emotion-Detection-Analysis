@@ -186,12 +186,52 @@ def make_mediapipe_predictor():
     return predict
 
 
+def make_emotiefflib_engagement_predictor():
+    """Feature extraction (extract_features) is fast, ~10ms - see
+    run_emotiefflib_engagement.py. classify_engagement() is NOT: it rebuilds
+    a Keras model and reloads its weights from disk on every call (measured
+    ~700ms, see that script's docstring/output) - calling it every frame
+    would make the live demo look frozen. Recompute on a cadence instead
+    (every RECOMPUTE_EVERY frames, ~1-2x/sec at typical webcam fps) and
+    return the cached last score in between - engagement is a coarser,
+    slower-moving signal than per-frame emotion anyway, so this doesn't lose
+    anything meaningful.
+    """
+    import numpy as np
+    from collections import deque
+    from emotiefflib.facial_analysis import EmotiEffLibRecognizer
+
+    recognizer = EmotiEffLibRecognizer(engine="onnx", model_name="enet_b0_8_best_vgaf")
+    window_width = 128
+    buffer = deque(maxlen=window_width + 20)
+    RECOMPUTE_EVERY = 15
+    state = {"last": None, "frames_since_recompute": 0}
+
+    def predict(face_bgr):
+        face_rgb = cv2.cvtColor(face_bgr, cv2.COLOR_BGR2RGB)
+        features = recognizer.extract_features(face_rgb)[0]
+        buffer.append(features)
+        if len(buffer) <= window_width:
+            return f"buffering ({len(buffer)}/{window_width + 1})"
+        state["frames_since_recompute"] += 1
+        if state["last"] is None or state["frames_since_recompute"] >= RECOMPUTE_EVERY:
+            preds, _scores = recognizer.classify_engagement(
+                np.stack(buffer), sliding_window_width=window_width
+            )
+            state["last"] = preds[-1]
+            state["frames_since_recompute"] = 0
+        return state["last"]
+
+    return predict
+
+
 MODELS = [
     ("fer (mini-xception)", make_fer_predictor),
     ("DeepFace", make_deepface_predictor),
     ("HSEmotion", make_hsemotion_predictor),
     ("EfficientFace", make_efficientface_predictor),
     ("MediaPipe (top blendshape, no emotion label)", make_mediapipe_predictor),
+    ("EmotiEffLib engagement (sliding window)", make_emotiefflib_engagement_predictor),
 ]
 
 

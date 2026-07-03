@@ -12,10 +12,10 @@ These models are highly optimized for fast facial expression recognition. They o
 | **MediaPipe** | CV / Tracking | **< 100 MB** (CPU/Mobile optimized) | [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe) | ⚠️ **No** — stock Face Landmarker only outputs 52 blendshape scores + raw landmarks, no built-in emotion label; needs a separate classifier trained on top |
 | **fer** | CV / Python Lib | **< 1 GB** | [justinshenk/fer](https://github.com/justinshenk/fer) | ✅ Yes — `detect_emotions()` returns 7-class emotion dict with confidence scores directly |
 | **DeepFace** | CV / Python Lib | **~1 GB** (Depends on backend e.g., VGG-Face) | [serengil/deepface](https://github.com/serengil/deepface) | ✅ Yes — `DeepFace.analyze(actions=['emotion'])` returns `dominant_emotion` + per-class scores directly |
-| **EmotiEffLib (HSEmotion)**| CV / EfficientNet| **~1 GB** (PyTorch / ONNX) | [HSE-asavchenko/face-emotion-recognition](https://github.com/HSE-asavchenko/face-emotion-recognition) | ✅ Yes — `predict_emotions()` returns categorical label (8 classes) + scores directly |
+| **EmotiEffLib (HSEmotion)**| CV / EfficientNet| **~1 GB** (PyTorch / ONNX) | [sb-ai-lab/EmotiEffLib](https://github.com/sb-ai-lab/EmotiEffLib) | ✅ Yes — `predict_emotions()` returns categorical label (8 classes) + scores directly. **Also ships `predict_engagement()`** (see §5) — a sliding-window (default 128 frames) attention classifier, separate signal from per-frame emotion, directly relevant to student-session monitoring |
 | **EfficientFace** | CV / ResNet | **~1 GB** | [zengqunzhao/EfficientFace](https://github.com/zengqunzhao/EfficientFace) | ✅ Yes, with caveat — pretrained heads on RAF-DB/AffectNet give direct 7-class output, but it's research code (manual checkpoint download, no pip package) |
 | **Py-Feat** | CV / Toolkit | **~1 GB - 1.5 GB** | [cosanlab/py-feat](https://github.com/cosanlab/py-feat) | ✅ Yes — `Detector` output includes a dedicated `fex.emotions` field alongside Action Units, not AUs alone |
-| **OpenFace** | CV / Toolkit | **~1 GB - 2 GB** (Tracks facial muscle Action Units) | [TadasBaltrusaitis/OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) | ⚠️ **No** — outputs only Action Unit presence/intensity, no direct emotion classification; users must do their own FACS→emotion mapping |
+| **OpenFace** | CV / Toolkit | **~1 GB - 2 GB** (Tracks facial muscle Action Units) | [TadasBaltrusaitis/OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) | ⚠️ **No** (2.x) — outputs only Action Unit presence/intensity, no direct emotion classification; users must do their own FACS→emotion mapping. **OpenFace 3.0 adds a direct emotion-recognition head (see §5) but is non-commercial-licensed** — not usable for a commercial product regardless of capability |
 
 ## 2. Vision-Language Models (VLMs)
 These models analyze the entire scene, providing reasoning and context behind the user's emotional state (e.g., body language, environment). They are significantly heavier and will consume a large portion of a 6GB VRAM budget, reducing concurrency headroom for other models.
@@ -47,3 +47,34 @@ it actually produces an emotion output, rather than just being adjacent to the t
 * **Florence-2** — the linked `-base` checkpoint is a task-token model (`<CAPTION>`, `<OD>`, `<VQA>`), not instruction-tuned, and can't reliably take an open-ended "what emotion is this?" prompt. Needs a fine-tuned or instruction-following variant to be usable for this task at all.
 * **PaliGemma** — the linked `-pt-224` checkpoint is the raw pretrained model, explicitly documented by Google as not meant for direct prompting. **Corrected above to `-mix-224`**, the instruction-tuned checkpoint that can actually answer open-ended questions.
 * Qwen2.5-VL-3B, Moondream2, MiniCPM-V 2.6, and LLaVA-1.5-7B are all genuinely promptable for emotion/affect reasoning, but none has emotion-specific benchmarking as strong as the CV track's dedicated classifiers — treat their VLM scores as "can reason about it," not "measured accurate at it," until Track B evaluation (see `reports/evaluation_plan.md`) actually runs.
+
+## 5. 2026-07-03 spike: two new candidates checked for the production-selection harness
+
+Checked while scoping `reports/production_candidate_comparison.md` (Track C, see
+`reports/evaluation_plan.md`), specifically for a real-time student-emotion signal
+usable in a commercial LLM-tutoring product:
+
+* **OpenFace 3.0** ([CMU-MultiComp-Lab/OpenFace-3.0](https://github.com/CMU-MultiComp-Lab/OpenFace-3.0),
+  arXiv [2506.02891](https://arxiv.org/abs/2506.02891)) — genuinely adds a direct
+  FC-layer emotion-recognition head alongside landmarks/AUs/gaze in one lightweight
+  multitask model, fixing what §4 above documents as OpenFace 2.x's core gap. **However,
+  its `LICENSE` (fetched directly from the repo) is CMU's "ACADEMIC OR NON-PROFIT
+  ORGANIZATION NONCOMMERCIAL RESEARCH USE ONLY" agreement** — the same restrictive
+  lineage as the original OpenFace toolkit (non-commercial, ~$18k/yr for a commercial
+  license per CMU's licensing portal). **Not built into this repo's harness** — excluded
+  at the license gate before any runner code was written, per this repo's production-fit
+  requirement. Revisit only if CMU changes terms or a commercial license is purchased.
+* **EmotiEffLib engagement mode** — the library already used in this repo (as
+  `hsemotion-onnx` 0.3.1, the older API) has a successor PyPI package, `emotiefflib`
+  (checked: v1.1.1, **Apache-2.0, "no limitation for both academic and commercial
+  usage"**), which adds `EmotiEffLibRecognizer.predict_engagement(face_imgs, sliding_window_width=128)`
+  — a genuinely different signal from categorical emotion, more directly relevant to
+  "is this student engaged/disengaged" than a 7-8 class emotion label. Mechanically: it
+  extracts a 2560-dim feature vector per frame (same backbone as `predict_emotions`,
+  `torch` or `onnx` engine), then runs a TensorFlow/Keras attention model over a
+  **sliding window of frames (default 128)** — i.e. it needs several seconds of buffered
+  frames, not a single frame, to produce one engagement score. TensorFlow was already a
+  working dependency in this repo (via `fer`/DeepFace), confirmed at v2.21.0. **Cleared
+  for onboarding** (`src/cv/run_emotiefflib_engagement.py`) — the single most
+  use-case-relevant finding of this spike, since it targets session/engagement state
+  directly rather than being a proxy via categorical emotion.

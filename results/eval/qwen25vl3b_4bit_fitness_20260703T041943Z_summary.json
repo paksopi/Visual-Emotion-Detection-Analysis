@@ -1,0 +1,18 @@
+{
+  "model": "qwen25vl3b_4bit_fitness",
+  "track": "session-fitness",
+  "run_id": "20260703T041943Z",
+  "source_summary": "qwen25vl3b_4bit_20260703T035517Z_summary.json",
+  "source_track": "B",
+  "latency": {
+    "n": 20,
+    "median_ms": 17139.3822,
+    "p95_ms": 19098.367900000085,
+    "mean_ms": 15576.270954999927
+  },
+  "bucket": "async_only",
+  "verdict_pass": false,
+  "median_ms": 17139.3822,
+  "threshold_ms": Infinity,
+  "description": "Too slow to gate a chat turn even with debounce - must run purely out-of-band."
+}

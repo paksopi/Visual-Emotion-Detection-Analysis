@@ -1,0 +1,18 @@
+{
+  "model": "hsemotion_fitness",
+  "track": "session-fitness",
+  "run_id": "20260703T041943Z",
+  "source_summary": "hsemotion_20260703T034649Z_summary.json",
+  "source_track": "A",
+  "latency": {
+    "n": 7178,
+    "median_ms": 8.174800000233517,
+    "p95_ms": 10.190200000579352,
+    "mean_ms": 8.405794942889438
+  },
+  "bucket": "realtime",
+  "verdict_pass": true,
+  "median_ms": 8.174800000233517,
+  "threshold_ms": 300,
+  "description": "Fully non-blocking per-turn signal - safe to call synchronously in the chat-turn path."
+}

@@ -15,3 +15,9 @@ data/models/
 
 # self-collected webcam stress-set photos (personal face images, not for git) - see reports/track_a_stress_test_results.md for the aggregated results
 data/track_a_stress/
+
+# native libvips binary fetched for Moondream2's pyvips dependency (large DLLs, not for git)
+data/vips/extracted/
+
+# isolated venv for OpenFace 3.0, if ever built (non-commercial license - see reports/license_comparison.md)
+.venv-openface3/

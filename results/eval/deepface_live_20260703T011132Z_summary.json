@@ -1,0 +1,15 @@
+{
+  "model": "deepface_live",
+  "track": "live-webcam",
+  "run_id": "20260703T011132Z",
+  "seconds": 15,
+  "n_frames": 443,
+  "n_frames_with_face": 443,
+  "label_counts": {
+    "neutral": 325,
+    "sad": 29,
+    "fear": 13,
+    "angry": 15,
+    "happy": 61
+  }
+}

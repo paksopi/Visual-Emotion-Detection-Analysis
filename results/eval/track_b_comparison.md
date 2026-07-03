@@ -2,8 +2,8 @@
 
 | Model | Emotion correctness (avg /5) | Contextual grounding (avg /5) | Hallucinations (total) | Usefulness (avg /5) | Median latency (ms) | Peak VRAM (MB) |
 |---|---|---|---|---|---|---|
-| Moondream2 (fp16) | 4.20 | 4.45 | 4 | 4.20 | 5358 | 4475 |
-| Qwen2.5-VL-3B-Instruct (4-bit nf4) | 4.20 | 4.35 | 6 | 4.10 | 10390 | 2678 |
+| Moondream2 (fp16) | 4.20 | 4.45 | 4 | 4.20 | 5139 | 4487 |
+| Qwen2.5-VL-3B-Instruct (4-bit nf4) | 4.20 | 4.35 | 6 | 4.10 | 17139 | 3205 |
 
 ## Native-capability results (no open-ended emotion prompting)
 

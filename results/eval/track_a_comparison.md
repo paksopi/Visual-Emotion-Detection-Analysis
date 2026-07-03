@@ -79,6 +79,13 @@
 
 Models with no built-in emotion label, run on their actual native task instead (see each runner's docstring).
 
+### emotiefflib_engagement
+
+- Capability: predict_engagement() - sliding-window (default 128 frames) attention classifier over per-frame EfficientNet features, binary engaged/disengaged
+- N images: 200
+- Median latency: 9.76ms, p95: 11.68ms
+- Note: Not an emotion/engagement accuracy benchmark - FER2013 has no video sequences, so there is no meaningful ground truth (or meaningful input) for a sliding-window engagement model here. 'latency' above is genuine per-frame feature-extraction cost (real-time-relevant); the engagement classification call itself was only measured for its own compute cost on a synthetic buffer, see engagement_classification_note. A real deployment needs a live per-subject frame buffer (e.g. the last few seconds of webcam frames), not single unrelated images.
+
 ### mediapipe
 
 - Capability: face landmarks + 52 ARKit-style blendshape coefficients (no built-in emotion label)

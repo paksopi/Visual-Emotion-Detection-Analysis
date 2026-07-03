@@ -1,0 +1,15 @@
+{
+  "model": "emotiefflib_engagement",
+  "track": "A",
+  "run_id": "20260703T035148Z",
+  "latency": {
+    "n": 300,
+    "median_ms": 9.1723000005004,
+    "p95_ms": 15.38319999963278,
+    "mean_ms": 18.53657433339322
+  },
+  "peak_vram_mb": 0.0,
+  "n_images": 300,
+  "license_id": "apache-2.0",
+  "production_eligible": true
+}

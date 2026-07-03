@@ -1,0 +1,300 @@
+{"ts": "2026-07-03T03:51:48.965928+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02586.jpg", "pred": "buffering (1/129)"}
+{"ts": "2026-07-03T03:51:48.977023+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\disgusted\\01037.jpg", "pred": "buffering (2/129)"}
+{"ts": "2026-07-03T03:51:48.986619+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\05052.jpg", "pred": "buffering (3/129)"}
+{"ts": "2026-07-03T03:51:48.998872+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03400.jpg", "pred": "buffering (4/129)"}
+{"ts": "2026-07-03T03:51:49.012894+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04199.jpg", "pred": "buffering (5/129)"}
+{"ts": "2026-07-03T03:51:49.027067+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02566.jpg", "pred": "buffering (6/129)"}
+{"ts": "2026-07-03T03:51:49.038065+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04564.jpg", "pred": "buffering (7/129)"}
+{"ts": "2026-07-03T03:51:49.049574+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06300.jpg", "pred": "buffering (8/129)"}
+{"ts": "2026-07-03T03:51:49.060585+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01622.jpg", "pred": "buffering (9/129)"}
+{"ts": "2026-07-03T03:51:49.072117+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03044.jpg", "pred": "buffering (10/129)"}
+{"ts": "2026-07-03T03:51:49.088090+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05498.jpg", "pred": "buffering (11/129)"}
+{"ts": "2026-07-03T03:51:49.099088+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04198.jpg", "pred": "buffering (12/129)"}
+{"ts": "2026-07-03T03:51:49.110160+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03998.jpg", "pred": "buffering (13/129)"}
+{"ts": "2026-07-03T03:51:49.120170+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04485.jpg", "pred": "buffering (14/129)"}
+{"ts": "2026-07-03T03:51:49.131728+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03822.jpg", "pred": "buffering (15/129)"}
+{"ts": "2026-07-03T03:51:49.142251+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06446.jpg", "pred": "buffering (16/129)"}
+{"ts": "2026-07-03T03:51:49.153048+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03830.jpg", "pred": "buffering (17/129)"}
+{"ts": "2026-07-03T03:51:49.167064+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06745.jpg", "pred": "buffering (18/129)"}
+{"ts": "2026-07-03T03:51:49.179888+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05154.jpg", "pred": "buffering (19/129)"}
+{"ts": "2026-07-03T03:51:49.191151+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01821.jpg", "pred": "buffering (20/129)"}
+{"ts": "2026-07-03T03:51:49.201164+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00354.jpg", "pred": "buffering (21/129)"}
+{"ts": "2026-07-03T03:51:49.210669+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00754.jpg", "pred": "buffering (22/129)"}
+{"ts": "2026-07-03T03:51:49.220681+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03768.jpg", "pred": "buffering (23/129)"}
+{"ts": "2026-07-03T03:51:49.232232+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01187.jpg", "pred": "buffering (24/129)"}
+{"ts": "2026-07-03T03:51:49.241456+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06992.jpg", "pred": "buffering (25/129)"}
+{"ts": "2026-07-03T03:51:49.249457+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\07030.jpg", "pred": "buffering (26/129)"}
+{"ts": "2026-07-03T03:51:49.258457+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04217.jpg", "pred": "buffering (27/129)"}
+{"ts": "2026-07-03T03:51:49.268485+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00037.jpg", "pred": "buffering (28/129)"}
+{"ts": "2026-07-03T03:51:49.277490+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04793.jpg", "pred": "buffering (29/129)"}
+{"ts": "2026-07-03T03:51:49.286499+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04252.jpg", "pred": "buffering (30/129)"}
+{"ts": "2026-07-03T03:51:49.296497+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03751.jpg", "pred": "buffering (31/129)"}
+{"ts": "2026-07-03T03:51:49.306088+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06727.jpg", "pred": "buffering (32/129)"}
+{"ts": "2026-07-03T03:51:49.319269+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04678.jpg", "pred": "buffering (33/129)"}
+{"ts": "2026-07-03T03:51:49.333823+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06414.jpg", "pred": "buffering (34/129)"}
+{"ts": "2026-07-03T03:51:49.345822+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03542.jpg", "pred": "buffering (35/129)"}
+{"ts": "2026-07-03T03:51:49.356826+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06024.jpg", "pred": "buffering (36/129)"}
+{"ts": "2026-07-03T03:51:49.366817+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01364.jpg", "pred": "buffering (37/129)"}
+{"ts": "2026-07-03T03:51:49.376853+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04774.jpg", "pred": "buffering (38/129)"}
+{"ts": "2026-07-03T03:51:49.386582+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04648.jpg", "pred": "buffering (39/129)"}
+{"ts": "2026-07-03T03:51:49.396643+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01700.jpg", "pred": "buffering (40/129)"}
+{"ts": "2026-07-03T03:51:49.406643+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01849.jpg", "pred": "buffering (41/129)"}
+{"ts": "2026-07-03T03:51:49.415672+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04622.jpg", "pred": "buffering (42/129)"}
+{"ts": "2026-07-03T03:51:49.426178+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03196.jpg", "pred": "buffering (43/129)"}
+{"ts": "2026-07-03T03:51:49.436179+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00124.jpg", "pred": "buffering (44/129)"}
+{"ts": "2026-07-03T03:51:49.446213+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04078.jpg", "pred": "buffering (45/129)"}
+{"ts": "2026-07-03T03:51:49.456231+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03945.jpg", "pred": "buffering (46/129)"}
+{"ts": "2026-07-03T03:51:49.466230+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\02089.jpg", "pred": "buffering (47/129)"}
+{"ts": "2026-07-03T03:51:49.475227+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02760.jpg", "pred": "buffering (48/129)"}
+{"ts": "2026-07-03T03:51:49.485252+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06535.jpg", "pred": "buffering (49/129)"}
+{"ts": "2026-07-03T03:51:49.495288+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04984.jpg", "pred": "buffering (50/129)"}
+{"ts": "2026-07-03T03:51:49.505176+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00116.jpg", "pred": "buffering (51/129)"}
+{"ts": "2026-07-03T03:51:49.515185+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00379.jpg", "pred": "buffering (52/129)"}
+{"ts": "2026-07-03T03:51:49.523688+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04213.jpg", "pred": "buffering (53/129)"}
+{"ts": "2026-07-03T03:51:49.533700+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03488.jpg", "pred": "buffering (54/129)"}
+{"ts": "2026-07-03T03:51:49.543689+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00925.jpg", "pred": "buffering (55/129)"}
+{"ts": "2026-07-03T03:51:49.553713+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02739.jpg", "pred": "buffering (56/129)"}
+{"ts": "2026-07-03T03:51:49.563721+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06750.jpg", "pred": "buffering (57/129)"}
+{"ts": "2026-07-03T03:51:49.575863+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00333.jpg", "pred": "buffering (58/129)"}
+{"ts": "2026-07-03T03:51:49.588826+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06193.jpg", "pred": "buffering (59/129)"}
+{"ts": "2026-07-03T03:51:49.599911+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04806.jpg", "pred": "buffering (60/129)"}
+{"ts": "2026-07-03T03:51:49.610186+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02922.jpg", "pred": "buffering (61/129)"}
+{"ts": "2026-07-03T03:51:49.621706+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04946.jpg", "pred": "buffering (62/129)"}
+{"ts": "2026-07-03T03:51:49.631934+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05640.jpg", "pred": "buffering (63/129)"}
+{"ts": "2026-07-03T03:51:49.642054+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01856.jpg", "pred": "buffering (64/129)"}
+{"ts": "2026-07-03T03:51:49.652059+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04376.jpg", "pred": "buffering (65/129)"}
+{"ts": "2026-07-03T03:51:49.663073+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05101.jpg", "pred": "buffering (66/129)"}
+{"ts": "2026-07-03T03:51:49.673101+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02916.jpg", "pred": "buffering (67/129)"}
+{"ts": "2026-07-03T03:51:49.683103+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03045.jpg", "pred": "buffering (68/129)"}
+{"ts": "2026-07-03T03:51:49.694099+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00434.jpg", "pred": "buffering (69/129)"}
+{"ts": "2026-07-03T03:51:49.703585+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02319.jpg", "pred": "buffering (70/129)"}
+{"ts": "2026-07-03T03:51:49.713605+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01106.jpg", "pred": "buffering (71/129)"}
+{"ts": "2026-07-03T03:51:49.723634+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01951.jpg", "pred": "buffering (72/129)"}
+{"ts": "2026-07-03T03:51:49.734633+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06328.jpg", "pred": "buffering (73/129)"}
+{"ts": "2026-07-03T03:51:49.742649+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01238.jpg", "pred": "buffering (74/129)"}
+{"ts": "2026-07-03T03:51:49.752673+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05663.jpg", "pred": "buffering (75/129)"}
+{"ts": "2026-07-03T03:51:49.762696+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04071.jpg", "pred": "buffering (76/129)"}
+{"ts": "2026-07-03T03:51:49.774694+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02420.jpg", "pred": "buffering (77/129)"}
+{"ts": "2026-07-03T03:51:49.784140+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01668.jpg", "pred": "buffering (78/129)"}
+{"ts": "2026-07-03T03:51:49.794152+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04009.jpg", "pred": "buffering (79/129)"}
+{"ts": "2026-07-03T03:51:49.803157+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02396.jpg", "pred": "buffering (80/129)"}
+{"ts": "2026-07-03T03:51:49.813174+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00882.jpg", "pred": "buffering (81/129)"}
+{"ts": "2026-07-03T03:51:49.823627+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\07165.jpg", "pred": "buffering (82/129)"}
+{"ts": "2026-07-03T03:51:49.837626+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01205.jpg", "pred": "buffering (83/129)"}
+{"ts": "2026-07-03T03:51:49.848130+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02670.jpg", "pred": "buffering (84/129)"}
+{"ts": "2026-07-03T03:51:49.857120+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02749.jpg", "pred": "buffering (85/129)"}
+{"ts": "2026-07-03T03:51:49.867120+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04930.jpg", "pred": "buffering (86/129)"}
+{"ts": "2026-07-03T03:51:49.876132+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02297.jpg", "pred": "buffering (87/129)"}
+{"ts": "2026-07-03T03:51:49.885631+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03864.jpg", "pred": "buffering (88/129)"}
+{"ts": "2026-07-03T03:51:49.898651+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06625.jpg", "pred": "buffering (89/129)"}
+{"ts": "2026-07-03T03:51:49.908152+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01456.jpg", "pred": "buffering (90/129)"}
+{"ts": "2026-07-03T03:51:49.917658+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05803.jpg", "pred": "buffering (91/129)"}
+{"ts": "2026-07-03T03:51:49.926940+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\disgusted\\00983.jpg", "pred": "buffering (92/129)"}
+{"ts": "2026-07-03T03:51:49.936267+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04797.jpg", "pred": "buffering (93/129)"}
+{"ts": "2026-07-03T03:51:49.946411+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05822.jpg", "pred": "buffering (94/129)"}
+{"ts": "2026-07-03T03:51:49.955410+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00102.jpg", "pred": "buffering (95/129)"}
+{"ts": "2026-07-03T03:51:49.964411+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\07041.jpg", "pred": "buffering (96/129)"}
+{"ts": "2026-07-03T03:51:49.973426+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00716.jpg", "pred": "buffering (97/129)"}
+{"ts": "2026-07-03T03:51:49.983452+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03069.jpg", "pred": "buffering (98/129)"}
+{"ts": "2026-07-03T03:51:49.993432+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04955.jpg", "pred": "buffering (99/129)"}
+{"ts": "2026-07-03T03:51:50.002430+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06847.jpg", "pred": "buffering (100/129)"}
+{"ts": "2026-07-03T03:51:50.011430+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05731.jpg", "pred": "buffering (101/129)"}
+{"ts": "2026-07-03T03:51:50.020316+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01596.jpg", "pred": "buffering (102/129)"}
+{"ts": "2026-07-03T03:51:50.030337+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00350.jpg", "pred": "buffering (103/129)"}
+{"ts": "2026-07-03T03:51:50.042352+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04305.jpg", "pred": "buffering (104/129)"}
+{"ts": "2026-07-03T03:51:50.052338+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01459.jpg", "pred": "buffering (105/129)"}
+{"ts": "2026-07-03T03:51:50.063337+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04926.jpg", "pred": "buffering (106/129)"}
+{"ts": "2026-07-03T03:51:50.073624+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05578.jpg", "pred": "buffering (107/129)"}
+{"ts": "2026-07-03T03:51:50.084235+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04873.jpg", "pred": "buffering (108/129)"}
+{"ts": "2026-07-03T03:51:50.094323+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02330.jpg", "pred": "buffering (109/129)"}
+{"ts": "2026-07-03T03:51:50.104320+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02635.jpg", "pred": "buffering (110/129)"}
+{"ts": "2026-07-03T03:51:50.114320+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01760.jpg", "pred": "buffering (111/129)"}
+{"ts": "2026-07-03T03:51:50.123937+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02714.jpg", "pred": "buffering (112/129)"}
+{"ts": "2026-07-03T03:51:50.134970+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01830.jpg", "pred": "buffering (113/129)"}
+{"ts": "2026-07-03T03:51:50.145042+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\02060.jpg", "pred": "buffering (114/129)"}
+{"ts": "2026-07-03T03:51:50.156053+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06805.jpg", "pred": "buffering (115/129)"}
+{"ts": "2026-07-03T03:51:50.165783+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05838.jpg", "pred": "buffering (116/129)"}
+{"ts": "2026-07-03T03:51:50.175803+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06953.jpg", "pred": "buffering (117/129)"}
+{"ts": "2026-07-03T03:51:50.186184+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01552.jpg", "pred": "buffering (118/129)"}
+{"ts": "2026-07-03T03:51:50.196195+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00139.jpg", "pred": "buffering (119/129)"}
+{"ts": "2026-07-03T03:51:50.206195+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05344.jpg", "pred": "buffering (120/129)"}
+{"ts": "2026-07-03T03:51:50.216744+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01889.jpg", "pred": "buffering (121/129)"}
+{"ts": "2026-07-03T03:51:50.226259+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\02039.jpg", "pred": "buffering (122/129)"}
+{"ts": "2026-07-03T03:51:50.236254+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01573.jpg", "pred": "buffering (123/129)"}
+{"ts": "2026-07-03T03:51:50.246262+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02179.jpg", "pred": "buffering (124/129)"}
+{"ts": "2026-07-03T03:51:50.256270+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00107.jpg", "pred": "buffering (125/129)"}
+{"ts": "2026-07-03T03:51:50.266256+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05192.jpg", "pred": "buffering (126/129)"}
+{"ts": "2026-07-03T03:51:50.276252+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03341.jpg", "pred": "buffering (127/129)"}
+{"ts": "2026-07-03T03:51:50.286072+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05292.jpg", "pred": "buffering (128/129)"}
+{"ts": "2026-07-03T03:51:50.725958+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03656.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.737960+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\02054.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.750960+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03217.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.761959+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06416.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.774775+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06233.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.789820+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03578.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.800977+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04384.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.812975+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06054.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.824489+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03767.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.838014+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00592.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.851009+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01509.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.863468+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00168.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.876910+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05610.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.888829+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02889.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:50.900753+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01823.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.162619+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04968.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.174264+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04245.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.186523+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03535.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.198812+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04067.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.209340+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04406.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.219856+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06826.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.230385+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03140.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.241374+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\disgusted\\01002.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.251413+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00288.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.262447+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03095.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.272542+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06729.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.282869+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06929.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.290862+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01415.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.302390+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02974.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.313495+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00773.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.517015+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01164.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.550018+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00321.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.594169+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05678.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.613605+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00314.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.624093+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01376.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.633290+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06691.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.646289+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01491.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.656292+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00293.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.666955+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05102.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.676588+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03891.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.687903+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00400.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.699737+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05916.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.708958+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03991.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.719324+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00065.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.728829+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02150.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.960793+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02447.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.972187+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01632.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.982847+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04721.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:51.994925+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05155.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.004949+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00478.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.015958+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00143.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.025467+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06008.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.034625+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04121.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.044644+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00691.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.053146+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00854.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.062308+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05873.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.070311+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01075.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.081361+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00327.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.095899+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01315.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.106903+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04328.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.301659+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03932.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.311179+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01979.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.321686+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\05081.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.331196+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05326.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.344205+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03494.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.356219+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03246.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.369224+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04034.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.381250+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03720.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.392008+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06720.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.404533+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03664.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.417579+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01333.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.426069+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05776.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.437082+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00786.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.448084+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00367.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.457079+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04287.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.641819+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03156.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.651854+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02858.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.661852+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00615.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.672323+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01465.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.681576+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06981.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.691848+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00752.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.700839+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04964.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.711604+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05245.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.720740+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04411.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.732015+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02273.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.744513+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05458.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.760399+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03446.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.773179+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03195.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.783584+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01487.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.793283+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00662.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:52.992974+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01834.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.002977+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00176.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.011995+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06774.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.022502+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01397.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.033033+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05495.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.045707+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03615.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.057706+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00782.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.068851+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01492.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.078890+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04192.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.090383+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00618.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.100802+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04030.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.113809+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01543.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.126321+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03292.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.137056+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05726.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.153055+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02389.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.366108+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06228.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.376133+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04307.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.388780+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03061.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.398789+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\07061.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.411223+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05461.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.422221+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03310.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.441735+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02754.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.453245+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05340.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.464243+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05819.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.474535+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\05056.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.488155+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05597.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.501673+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03959.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.513686+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01808.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.527208+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04758.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.538193+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05391.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.747441+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02125.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.757778+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02658.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.767775+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02800.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.779377+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02909.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.789774+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03042.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.799774+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06099.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.810784+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01724.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.820777+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00680.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.830288+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05810.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.840734+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04978.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.850754+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06545.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.861016+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06728.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.872018+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00412.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.888542+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00145.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:53.900551+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01773.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.100844+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\disgusted\\01068.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.110846+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04898.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.120843+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\03937.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.131372+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03740.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.141375+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04558.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.154374+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06010.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.169370+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00152.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.182368+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\06040.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.193373+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05141.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.202395+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06881.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.212910+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04476.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.228015+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04440.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.237549+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01820.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.251547+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\05050.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.262900+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02637.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.459415+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00790.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.469536+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01898.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.479580+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02373.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.489848+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06532.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.498855+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00445.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.508299+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04851.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.519308+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03728.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.532867+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05504.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.543890+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01512.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.553089+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01925.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.564021+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05805.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.575130+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02151.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.591745+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01598.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.605009+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00278.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.618026+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01366.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.882725+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\fearful\\01533.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.892232+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\02819.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.902254+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\surprised\\06889.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.912260+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\neutral\\04547.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.922260+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\angry\\00001.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.932292+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\sad\\05271.jpg", "pred": "Engaged"}
+{"ts": "2026-07-03T03:51:54.942308+00:00", "image": "C:\\Users\\faids\\Documents\\GitHub\\Visual-Emotion-Detection-Analysis\\data\\fer2013\\test\\happy\\03347.jpg", "pred": "Engaged"}

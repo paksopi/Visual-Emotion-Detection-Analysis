@@ -1,0 +1,19 @@
+{
+  "model": "emotiefflib_engagement",
+  "track": "A-native",
+  "run_id": "20260703T022608Z",
+  "capability": "predict_engagement() - sliding-window (default 128 frames) attention classifier over per-frame EfficientNet features, binary engaged/disengaged",
+  "n_images": 200,
+  "n_features_extracted": 200,
+  "peak_vram_mb": 0.0,
+  "latency": {
+    "n": 200,
+    "median_ms": 9.759200000189594,
+    "p95_ms": 11.68130000041856,
+    "mean_ms": 10.01185450000321
+  },
+  "sliding_window_width": 128,
+  "engagement_classification_call_ms": 706.0935999998037,
+  "engagement_classification_note": "SYNTHETIC input (first 128 unrelated FER2013 images concatenated as a fake 'sequence') - measures the classification call's own compute cost only, the resulting scores are not a meaningful engagement read",
+  "note": "Not an emotion/engagement accuracy benchmark - FER2013 has no video sequences, so there is no meaningful ground truth (or meaningful input) for a sliding-window engagement model here. 'latency' above is genuine per-frame feature-extraction cost (real-time-relevant); the engagement classification call itself was only measured for its own compute cost on a synthetic buffer, see engagement_classification_note. A real deployment needs a live per-subject frame buffer (e.g. the last few seconds of webcam frames), not single unrelated images."
+}
